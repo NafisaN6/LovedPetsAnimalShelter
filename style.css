@@ -6,3 +6,8 @@ img {
   height: auto;   
   display: block; 
 }
+.scope-one-regular {
+  font-family: "Scope One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
