@@ -1,18 +1,112 @@
-body{
-    background-color: #cd7433;
-    font-family: "Scope One", serif;
+/* Color palette */
+:root {
+  --light: #f09857;
+  --medium: #cd7433;
+  --dark: #9c5f33;
+  --black: #000000;
 }
 
-img {
-  max-width: 100%; 
-  height: auto;   
-  display: block; 
-}
-.scope-one-regular {
+body {
+  margin: 0;
   font-family: "Scope One", serif;
-  font-weight: 400;
-  font-style: normal;
+  background-color: var(--medium);
+  color: black;
 }
-h1 {
-  font-size: 3rem;   
+
+/* ------------------------- */
+/* HERO SECTION */
+/* ------------------------- */
+
+.hero {
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  display: block;
+}
+
+/* LOGO IN TOP RIGHT */
+.hero-logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 130px;       /* adjust size as needed */
+  z-index: 10;
+}
+
+/* HERO TITLE BOX */
+.hero-title {
+  position: absolute;
+  bottom: 3%;
+  left: 5%;
+  background-color: rgba(252, 186, 140, 0.92);
+  padding: 20px 30px;
+  border-radius: 10px;
+  max-width: 450px;
+}
+
+.hero-title h1 {
+  margin: 0;
+  font-size: 4rem;
+  color: var(--black);
+}
+
+.hero-title p {
+  font-size: 1.25rem;
+}
+
+.adopt-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--dark);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* ------------------------- */
+/* PHILOSOPHY SECTION */
+/* ------------------------- */
+
+.philosophy {
+  background: var(--light);
+  padding: 40px;
+  text-align: center;
+}
+
+.philosophy h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.philo-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.philo-img {
+  width: 300px;
+  border-radius: 20px;
+}
+
+.philo-text {
+  max-width: 500px;
+  line-height: 1.7;
+  font-size: 1.2rem;
+}
+
+/* ------------------------- */
+/* FOOTER */
+/* ------------------------- */
+
+footer {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 15px;
 }
