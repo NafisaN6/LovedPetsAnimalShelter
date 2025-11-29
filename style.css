@@ -1,30 +1,25 @@
-/* Color palette */
-:root {
-  --light: #f09857;
-  --medium: #cd7433;
-  --dark: #9c5f33;
-  --black: #000000;
-}
-
+/* GENERAL */
 body {
   margin: 0;
-  font-family: "Scope One", serif;
-  background-color: var(--medium);
-  color: black;
+  font-family: 'Scope One', serif;
 }
 
 /* HERO SECTION */
 .hero {
-  position: relative;
+  position: relative; /* IMPORTANT — allows absolute children to layer */
   width: 100%;
-  height: auto;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  display: block;
-  position: relative;
-  z-index: 1;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1; /* Background */
 }
 
 /* LOGO IN TOP RIGHT */
@@ -32,84 +27,66 @@ body {
   position: absolute;
   top: 20px;
   right: 20px;
-  width: 130px;
-  z-index: 10;       /* LOWER than the title (which will be 20) */
-  pointer-events: none;
+  width: 180px;        /* adjust if needed */
+  z-index: 3;          /* ABOVE background AND text */
+  pointer-events: none; /* optional: prevents blocking clicks */
 }
 
-/* HERO TITLE BOX */
+/* HERO TITLE */
 .hero-title {
   position: absolute;
-  bottom: 3%;
-  left: 5%;
-  background-color: rgba(252, 186, 140, 0.92);
-  padding: 20px 30px;
-  border-radius: 10px;
-  max-width: 450px;
-  z-index: 20;       /* ensures title + button appear ABOVE logo */
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  text-shadow: 2px 2px 10px black;
 }
 
 .hero-title h1 {
+  font-size: 3rem;
   margin: 0;
-  font-size: 4rem;
-  color: var(--black);
-}
-
-.hero-title p {
-  font-size: 1.25rem;
 }
 
 .adopt-btn {
   display: inline-block;
-  padding: 10px 20px;
-  background: var(--dark);
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #ff8c42;
   color: white;
   text-decoration: none;
-  border-radius: 10px;
-  font-weight: bold;
-  margin-top: 10px;
+  border-radius: 8px;
+  font-size: 1.2rem;
 }
 
-/* ------------------------- */
 /* PHILOSOPHY SECTION */
-/* ------------------------- */
-
 .philosophy {
-  background: var(--light);
-  padding: 40px;
-  text-align: center;
-}
-
-.philosophy h2 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  padding: 50px;
+  background-color: #f7f7f7;
 }
 
 .philo-flex {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
+  align-items: center;
+  gap: 30px;
 }
 
 .philo-img {
   width: 300px;
-  border-radius: 20px;
+  border-radius: 12px;
 }
 
 .philo-text {
-  max-width: 500px;
-  line-height: 1.7;
+  flex: 1;
   font-size: 1.2rem;
+  line-height: 1.6;
 }
 
-/* ------------------------- */
 /* FOOTER */
-/* ------------------------- */
-
 footer {
-  background: var(--dark);
-  color: white;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
+  background-color: #222;
+  color: white;
 }
