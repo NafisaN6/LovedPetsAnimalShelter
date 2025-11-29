@@ -13,17 +13,18 @@ body {
   color: black;
 }
 
-/* ------------------------- */
 /* HERO SECTION */
-/* ------------------------- */
-
 .hero {
   position: relative;
+  width: 100%;
+  height: auto;
 }
 
-.hero img {
+.hero-bg {
   width: 100%;
   display: block;
+  position: relative;
+  z-index: 1;
 }
 
 /* LOGO IN TOP RIGHT */
@@ -31,8 +32,9 @@ body {
   position: absolute;
   top: 20px;
   right: 20px;
-  width: 130px;       /* adjust size as needed */
-  z-index: 10;
+  width: 130px;
+  z-index: 9999;   /* forces it on top */
+  pointer-events: none; /* prevents interfering with clicks */
 }
 
 /* HERO TITLE BOX */
